@@ -1,9 +1,9 @@
 import { Box, Container } from "@chakra-ui/react";
+import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
 import Footer from "./Layout/Footer";
-import Navigation from "./Navigation";
 import LayoutTitle from "./Layout/LayoutTitle";
-import { AnimatePresence, motion } from "framer-motion";
+import Navigation from "./Navigation";
 
 const Layout = ({ children }) => {
   return (
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       </Head>
       <Navigation />
       <Container pt="35px" maxW="container.md">
-        <LayoutTitle />
+        <LayoutTitle />        
         <AnimatePresence>
           <Box
             as={motion.div}

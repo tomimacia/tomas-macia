@@ -1,3 +1,4 @@
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Breadcrumb,
@@ -13,9 +14,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { ChangeLanguageSwitch } from "./Navigation/ChangeLanguageSwitch";
+import { LanguageSwitch } from "./Navigation/LanguageSwitch";
 import ColorModeSwitch from "./Navigation/ColorModeSwitch";
-import { HamburgerIcon } from "@chakra-ui/icons";
 
 const Navigation = () => {
   return (
@@ -23,12 +23,12 @@ const Navigation = () => {
       as="nav"
       h="35px"
       bg="blackAlpha.200"
-      top={0}
+      top={1}
       position="fixed"
-      w="100%"
+      w="100%"      
     >
       <Container maxW="container.md" alignItems="center" display="flex">
-        <ChangeLanguageSwitch />
+        <LanguageSwitch />
 
         <Breadcrumb
           separator=""
@@ -49,8 +49,8 @@ const Navigation = () => {
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <BreadcrumbLink as={NextLink} href="Contact">
-              Contact
+            <BreadcrumbLink as={NextLink} href="Projects">
+              Projects
             </BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
@@ -73,8 +73,8 @@ const Navigation = () => {
                 <MenuItem as={NextLink} href="/Skills">
                   Skills
                 </MenuItem>
-                <MenuItem as={NextLink} href="/Contact">
-                  Contact
+                <MenuItem as={NextLink} href="/Projects">
+                  Projects
                 </MenuItem>
                 <MenuItem
                   as={NextLink}
