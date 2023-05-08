@@ -10,10 +10,11 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { ChangeLanguageSwitch } from "./ChangeLanguageSwitch";
-import ColorModeSwitch from "./ColorModeSwitch";
+import { ChangeLanguageSwitch } from "./Navigation/ChangeLanguageSwitch";
+import ColorModeSwitch from "./Navigation/ColorModeSwitch";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 const Navigation = () => {
@@ -30,7 +31,7 @@ const Navigation = () => {
         <ChangeLanguageSwitch />
 
         <Breadcrumb
-        separator=''
+          separator=""
           display={{ base: "none", sm: "flex", md: "flex" }}
           mr={3}
           fontSize={18}
@@ -49,20 +50,21 @@ const Navigation = () => {
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink as={NextLink} href="Contact">
-              Contacto
+              Contact
             </BreadcrumbLink>
           </BreadcrumbItem>
-        </Breadcrumb>        
-        <Flex flexDir='row'>
+        </Breadcrumb>
+        <Flex flexDir="row">
           <ColorModeSwitch />
 
-          <Box display={{ md: "none",sm:"none" }}>
-            <Menu >
+          <Box display={{ md: "none", sm: "none" }}>
+            <Menu>
               <MenuButton
                 as={IconButton}
+                fontSize={18}
+                outlineColor={useColorModeValue("blackAlpha.400", "gray.400")}
+                size="sm"
                 icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
               />
               <MenuList>
                 <MenuItem as={NextLink} href="/">
@@ -78,14 +80,14 @@ const Navigation = () => {
                   as={NextLink}
                   target="blank"
                   rel="noreferrer noopener"
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/tomimacia/tomas-macia"
                 >
                   View Source
                 </MenuItem>
               </MenuList>
             </Menu>
           </Box>
-        </Flex>        
+        </Flex>
       </Container>
     </Box>
   );

@@ -16,6 +16,7 @@ const ColorModeSwitch = () => {
         outlineColor={useColorModeValue("blackAlpha.400", "gray.400")}
         cursor="pointer"
         fontSize={18}
+        mr={2}
         size="sm"
         _hover={{ color: "blackAlpha.400" }}
         bg="transparent"        

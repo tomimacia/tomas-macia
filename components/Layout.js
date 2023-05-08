@@ -1,8 +1,8 @@
 import { Box, Container } from "@chakra-ui/react";
 import Head from "next/head";
-import Footer from "./Footer";
+import Footer from "./Layout/Footer";
 import Navigation from "./Navigation";
-import LayoutTitle from "./LayoutTitle";
+import LayoutTitle from "./Layout/LayoutTitle";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Layout = ({ children }) => {
