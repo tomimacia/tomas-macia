@@ -68,11 +68,11 @@ const Navigation = () => {
                 <MenuItem as={NextLink} href="/">
                   Home
                 </MenuItem>
-                <MenuItem as={NextLink} href="/works">
+                <MenuItem as={NextLink} href="/Skills">
                   Skills
                 </MenuItem>
-                <MenuItem as={NextLink} href="/posts">
-                  Contacto
+                <MenuItem as={NextLink} href="/Contact">
+                  Contact
                 </MenuItem>
                 <MenuItem
                   as={NextLink}
