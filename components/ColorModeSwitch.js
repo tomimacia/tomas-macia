@@ -1,0 +1,29 @@
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  IconButton,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
+
+const ColorModeSwitch = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  return (
+    <Box>
+      <IconButton
+        icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />}
+        onClick={toggleColorMode}
+        outlineColor={useColorModeValue("blackAlpha.400", "gray.400")}
+        cursor="pointer"
+        fontSize={18}
+        size="sm"
+        _hover={{ color: "blackAlpha.400" }}
+        bg="transparent"        
+      >
+        Switch Mode
+      </IconButton>
+    </Box>
+  );
+};
+
+export default ColorModeSwitch;
