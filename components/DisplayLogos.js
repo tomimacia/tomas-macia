@@ -32,6 +32,7 @@ const DisplayLogos = ({
         {logos.map((logo, i) => {
           return (
             <ChakraImg
+              key={startingTime + i}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: (i + startingTime + 1) * 0.2 }}

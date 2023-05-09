@@ -6,7 +6,7 @@ export const LanguageSwitch = () => {
   const setLanguage = useSetlanguage();
   const handleSwitch = useCallback(() => {
     setLanguage(language === "English" ? "Español" : "English");
-  });
+  },[]);
   return (
     <FormControl alignItems="center" display="flex" gap={1}>
       <Text fontSize="lg" mr={3}>
