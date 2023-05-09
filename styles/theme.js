@@ -1,10 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 import { theme as chakraTheme } from "@chakra-ui/react";
-
+import '@fontsource/montserrat/400.css'
 const fonts = {
   ...chakraTheme.fonts,
-  body: "arial",
-  heading: "arial",
+  body: "montserrat",
+  heading: "montserrat",
 };
 const breakpoints = {
   sm: "40em",

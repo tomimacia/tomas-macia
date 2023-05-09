@@ -1,30 +1,25 @@
-import { Container, Flex, chakra, shouldForwardProp } from "@chakra-ui/react";
-import { AnimatePresence, isValidMotionProp, motion } from "framer-motion";
+import {
+  Container
+} from "@chakra-ui/react";
+import DisplayLogos from "../../components/DisplayLogos";
 import Layout from "../../components/Layout";
-import { Logos } from "../../data/exportLogos";
+import { MainStack, Strong } from "../../data/exportLogos";
 const Skills = () => {
-  const ChakraImg = chakra(motion.img, {    
-    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
-  });
+  
   return (
     <Layout>
-      <Container>
-      <Flex gap={5} wrap="wrap">
-        {Logos.map((logo, i) => {
-          return (
-            <AnimatePresence key={`Logo-${i + 1}`}>
-              <ChakraImg                
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}   
-                transition={{ delay: i*0.2 }}             
-                h={50}                
-                alt={logo.alt}
-                src={logo.src}
-              />
-            </AnimatePresence>
-          );
-        })}
-      </Flex>
+      <Container>        
+        <DisplayLogos
+          englishTitle="Main stack:"
+          spanishTitle="Manejo avanzado:"
+          logos={MainStack}          
+        />
+        <DisplayLogos
+          englishTitle="Solid Knowledge:"
+          spanishTitle="Conocimientos sólidos:"
+          logos={Strong}
+          startingTime={MainStack.length + 1}
+        />
       </Container>
     </Layout>
   );

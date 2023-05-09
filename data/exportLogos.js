@@ -10,18 +10,21 @@ import NodeJS from "../public/logos/NodeJS.png";
 import Python from "../public/logos/Python.png";
 import React from "../public/logos/React.png";
 import ChakraUI from "../public/logos/ChakraUI.png";
-export const Logos = [
-  {...React,alt:"React-logo"},
-  {...ChakraUI,alt:"ChakraUI-logo"},
-  {...CSS,alt:"CSS-logo"},
-  {...Docker,alt:"Docker-logo"},
-  {...Firebase,alt:"Firebase-logo"},
-  {...FramerMotion,alt:"FramerMotion-logo"},
-  {...Git,alt:"Git-logo"},
+export const MainStack = [
   {...HTML,alt:"HTML-logo"},
+  {...CSS,alt:"CSS-logo"},  
   {...Javascript,alt:"Javascript-logo"},
+  {...React,alt:"React-logo"},
   {...NextJS,alt:"NextJS-logo"},
+  {...ChakraUI,alt:"ChakraUI-logo"},
+  {...Firebase,alt:"Firebase-logo"},
+  {...FramerMotion,alt:"FramerMotion-logo"},  
   {...NodeJS,alt:"NodeJS-logo"},
-  {...Python,alt:"Python-logo"},
+  
   
 ];
+export const Strong = [
+  {...Python,alt:"Python-logo"},
+  {...Git,alt:"Git-logo"},
+  {...Docker,alt:"Docker-logo"},
+]

@@ -1,24 +1,12 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Container,
-  Flex,
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  useColorModeValue,
+  Container
 } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { LanguageSwitch } from "./Navigation/LanguageSwitch";
-import ColorModeSwitch from "./Navigation/ColorModeSwitch";
 import NavLinks from "../data/NavLinks.json";
 import useJsonData from "../hooks/useJsonData";
-import { IoLogoGithub } from 'react-icons/io5'
+import BaseNav from "./Navigation/BaseNav";
+import { LanguageSwitch } from "./Navigation/LanguageSwitch";
+import MobileNav from "./Navigation/MobileNav";
 const Navigation = () => {
   const data = useJsonData(NavLinks);
   return (
@@ -38,68 +26,10 @@ const Navigation = () => {
       >
         <LanguageSwitch />
 
-        <Breadcrumb
-          separator=""
-          display={{ base: "none", sm: "flex", md: "flex" }}
-          mr={3}
-          fontSize={18}
-          spacing={4}
-        >
-          {data?.Links.map((link) => {
-            return (
-              <BreadcrumbItem key={"BaseLink"+link.Title}>
-                <BreadcrumbLink as={NextLink} href={link.href}>
-                  {link.Title}
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            );
-          })}
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={NextLink}
-              href={data.Source.href}
-              target={data.Source.target}
-              rel={data.Source.rel} 
-              display="inline-flex" 
-              alignItems="center" 
-              style={{ gap: 3 }}           
-            >
-              {data.Source.Title}<IoLogoGithub/>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-        <Flex flexDir="row">
-          <ColorModeSwitch />
-
-          <Box display={{ md: "none", sm: "none" }}>
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                fontSize={18}
-                outlineColor={useColorModeValue("blackAlpha.400", "gray.400")}
-                size="sm"
-                icon={<HamburgerIcon />}
-              />
-              <MenuList>
-                {data?.Links.map((link) => {
-                  return (
-                    <MenuItem key={"MobileLink"+link.Title} as={NextLink} href={link.href}>
-                      {link.Title}
-                    </MenuItem>
-                  );
-                })}                
-                <MenuItem
-                  as={NextLink}
-                  href={data.Source.href}
-                  target={data.Source.target}
-                  rel={data.Source.rel}
-                >
-                  {data.Source.Title}<IoLogoGithub/>
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Box>
-        </Flex>
+        <BaseNav data={data}/>
+        <MobileNav 
+        data={data}
+        />
       </Container>
     </Box>
   );
