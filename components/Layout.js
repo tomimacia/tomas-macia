@@ -24,7 +24,11 @@ const Layout = ({ children }) => {
       <Navigation />
       <Container h="100%" pb="4rem" pt="35px" maxW="container.md">
         <LayoutTitle />
-        <Divider m={6} maxW='90%' orientation="horizontal" />
+        <Divider                   
+          m={6}
+          maxW="90%"
+          orientation="horizontal"
+        />
         <AnimatePresence>
           <Box
             as={motion.div}

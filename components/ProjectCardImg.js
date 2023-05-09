@@ -2,14 +2,13 @@ import {
     Box,
     chakra,
     shouldForwardProp,
-    useBreakpointValue
+    useBreakpointValue,
 } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import { useState } from "react";
 import { useClickOutside } from "../hooks/useClickOutside";
-  
 
-export const ProjectCardImg = ({alt,img}) => {
+export const ProjectCardImg = ({ alt, img }) => {
   const [isOpen, setOpen] = useState(false);
   const ChakraImg = chakra(motion.img, {
     shouldForwardProp: (prop) =>
@@ -29,6 +28,7 @@ export const ProjectCardImg = ({alt,img}) => {
       <ChakraImg
         ref={domNode}
         animate={animation}
+        transition={{ type: "spring", stiffness: 35 }}
         cursor={isOpen ? "zoom-out" : "zoom-in"}
         onClick={() => setOpen((prev) => !prev)}
         m={2}

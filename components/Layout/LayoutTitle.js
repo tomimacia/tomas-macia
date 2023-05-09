@@ -1,15 +1,12 @@
 import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import NavProfileImage from "../../public/images/ProfileImages/NavProfileImage.jpg";
 import { SocialMedia } from "./SocialMedia";
-import LayoutTitleJson from "../../data/LayoutTitle.json"
-import useJsonData from "../../hooks/useJsonData";
 const LayoutTitle = () => {
-  const data = useJsonData(LayoutTitleJson)
   return (
     <Container mt={5} p={3}>
       <Flex justify="space-between">
         <Box>
-          <Heading w="100%">{data?.Title}</Heading>
+          <Heading w="100%">Tomás Macía</Heading>
           <Text w="100%" fontSize="lg" fontWeight="bold">
             Full-stack React developer
           </Text>

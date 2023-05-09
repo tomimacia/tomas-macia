@@ -12,11 +12,11 @@ const Projects = () => {
         <Heading as="h2" size="lg">
           {data?.Title}
         </Heading>
-        {data?.ProjectCardsData.map((project, i) => {
+        {data.ProjectCardsData.map((project, i) => {
           return (
             <ProjectsCard
               key={project.alt}
-              img={ProjectImages[i]?.src}
+              img={ProjectImages[i].src}
               project={project}
             />
           );
