@@ -1,7 +1,7 @@
 import { Container, Flex, chakra, shouldForwardProp } from "@chakra-ui/react";
 import { AnimatePresence, isValidMotionProp, motion } from "framer-motion";
 import Layout from "../../components/Layout";
-import { Logos } from "../../public/logos/exportLogos";
+import { Logos } from "../../data/exportLogos";
 const Skills = () => {
   const ChakraImg = chakra(motion.img, {    
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),

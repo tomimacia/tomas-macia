@@ -7,7 +7,7 @@ import Navigation from "./Navigation";
 
 const Layout = ({ children }) => {
   return (
-    <Box minH="100%" as="main" pb={6}>
+    <Box pos="relative" minH="100vh" h="100%" as="main">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Tomas Macia's homepage" />
@@ -22,19 +22,19 @@ const Layout = ({ children }) => {
         <title>Tomas Macia - Portfolio</title>
       </Head>
       <Navigation />
-      <Container pt="35px" maxW="container.md">
-        <LayoutTitle />        
+      <Container h="100%" pb='4rem' pt="35px" maxW="container.md">
+        <LayoutTitle />
         <AnimatePresence>
           <Box
             as={motion.div}
-            initial={{  opacity: 0 }}
-            animate={{  opacity: 1 }}                        
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
           >
             {children}
           </Box>
         </AnimatePresence>
-        <Footer />
       </Container>
+      <Footer />
     </Box>
   );
 };

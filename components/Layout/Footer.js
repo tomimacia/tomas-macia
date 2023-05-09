@@ -1,11 +1,18 @@
-import { Box } from '@chakra-ui/react'
+import { Center } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box pt={4} align="center" opacity={0.4} fontSize="sm">
+    <Center
+      pos="absolute"
+      bottom={0}
+      h="4rem"
+      w="100%"
+      opacity={0.4}
+      fontSize="sm"
+    >
       &copy; {new Date().getFullYear()} Tomas Macia. All Rights Reserved.
-    </Box>
-  )
-}
+    </Center>
+  );
+};
 
-export default Footer
+export default Footer;

@@ -16,18 +16,26 @@ import {
 import NextLink from "next/link";
 import { LanguageSwitch } from "./Navigation/LanguageSwitch";
 import ColorModeSwitch from "./Navigation/ColorModeSwitch";
-
+import NavLinks from "../data/NavLinks.json";
+import useJsonData from "../hooks/useJsonData";
+import { IoLogoGithub } from 'react-icons/io5'
 const Navigation = () => {
+  const data = useJsonData(NavLinks);
   return (
     <Box
       as="nav"
-      h="40px"      
+      h="40px"
       bg="blackAlpha.200"
       top={0}
       position="fixed"
-      w="100%"      
+      w="100%"
     >
-      <Container h='100%' maxW="container.md" alignItems='center' display="flex">
+      <Container
+        h="100%"
+        maxW="container.md"
+        alignItems="center"
+        display="flex"
+      >
         <LanguageSwitch />
 
         <Breadcrumb
@@ -37,20 +45,26 @@ const Navigation = () => {
           fontSize={18}
           spacing={4}
         >
+          {data?.Links.map((link) => {
+            return (
+              <BreadcrumbItem>
+                <BreadcrumbLink as={NextLink} href={link.href}>
+                  {link.Title}
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+            );
+          })}
           <BreadcrumbItem>
-            <BreadcrumbLink as={NextLink} href="/">
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-
-          <BreadcrumbItem>
-            <BreadcrumbLink as={NextLink} href="Skills">
-              Skills
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink as={NextLink} href="Projects">
-              Projects
+            <BreadcrumbLink
+              as={NextLink}
+              href={data.Source.href}
+              target={data.Source.target}
+              rel={data.Source.rel} 
+              display="inline-flex" 
+              alignItems="center" 
+              style={{ gap: 3 }}           
+            >
+              {data.Source.Title}<IoLogoGithub/>
             </BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
@@ -67,22 +81,20 @@ const Navigation = () => {
                 icon={<HamburgerIcon />}
               />
               <MenuList>
-                <MenuItem as={NextLink} href="/">
-                  Home
-                </MenuItem>
-                <MenuItem as={NextLink} href="/Skills">
-                  Skills
-                </MenuItem>
-                <MenuItem as={NextLink} href="/Projects">
-                  Projects
-                </MenuItem>
+                {data?.Links.map((link) => {
+                  return (
+                    <MenuItem as={NextLink} href={link.href}>
+                      {link.Title}
+                    </MenuItem>
+                  );
+                })}                
                 <MenuItem
                   as={NextLink}
-                  target="blank"
-                  rel="noreferrer noopener"
-                  href="https://github.com/tomimacia/tomas-macia"
+                  href={data.Source.href}
+                  target={data.Source.target}
+                  rel={data.Source.rel}
                 >
-                  View Source
+                  {data.Source.Title}<IoLogoGithub/>
                 </MenuItem>
               </MenuList>
             </Menu>

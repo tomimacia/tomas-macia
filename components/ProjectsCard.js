@@ -1,14 +1,16 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
+import { useLanguage } from "../context/languageContext";
 
 const ProjectsCard = ({ img, title, description, sourceHref, siteHref,alt }) => {
+  const language = useLanguage()
   return (
     <Box w="100%">
       <Heading p={5} w="100%" alignSelf="center" as="h3" size="md">
         {title}
       </Heading>
-      <Flex>
+      <Flex minH='200px'>
         <Image alt={alt} pr={3} h="100px" src={img} />
         <Flex justify="space-between" flexDir="column">
           <Text>{description}</Text>
@@ -19,11 +21,13 @@ const ProjectsCard = ({ img, title, description, sourceHref, siteHref,alt }) => 
               target="blank"
               rel="noreferred noopener"
               href={sourceHref}
+              w='107px'
             >
-              View Source
+              {language === "English" ? "View Source" : "Ver Fuente"}
             </Button>
             <Button
               bg='blue.400'
+              w='83px'
               _hover={{bg:'blue.200'}}
               size="sm"
               as={Link}
@@ -31,7 +35,7 @@ const ProjectsCard = ({ img, title, description, sourceHref, siteHref,alt }) => 
               rel="noreferred noopener"
               href={siteHref}
             >
-              Visit Site
+              {language === "English" ? "Visit Site" : "Ir al Sitio"}
             </Button>
           </Flex>
         </Flex>
