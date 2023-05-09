@@ -47,7 +47,7 @@ const Navigation = () => {
         >
           {data?.Links.map((link) => {
             return (
-              <BreadcrumbItem>
+              <BreadcrumbItem key={"BaseLink"+link.Title}>
                 <BreadcrumbLink as={NextLink} href={link.href}>
                   {link.Title}
                 </BreadcrumbLink>
@@ -83,7 +83,7 @@ const Navigation = () => {
               <MenuList>
                 {data?.Links.map((link) => {
                   return (
-                    <MenuItem as={NextLink} href={link.href}>
+                    <MenuItem key={"MobileLink"+link.Title} as={NextLink} href={link.href}>
                       {link.Title}
                     </MenuItem>
                   );
