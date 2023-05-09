@@ -21,13 +21,13 @@ const Navigation = () => {
   return (
     <Box
       as="nav"
-      h="35px"
+      h="40px"      
       bg="blackAlpha.200"
-      top={1}
+      top={0}
       position="fixed"
       w="100%"      
     >
-      <Container maxW="container.md" alignItems="center" display="flex">
+      <Container h='100%' maxW="container.md" alignItems='center' display="flex">
         <LanguageSwitch />
 
         <Breadcrumb

@@ -8,8 +8,7 @@ export default function App({ Component, pageProps }) {
     <ChakraProvider theme={customTheme}>
       <ColorModeProvider
         options={{
-          intialColorMode: "light",
-          useSystemColorMode: true,
+          intialColorMode: "dark",          
         }}
       >
         <Component {...pageProps} />

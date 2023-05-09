@@ -1,8 +1,8 @@
-import { Container, Heading } from "@chakra-ui/react";
+import { Container, Heading, Link, Text } from "@chakra-ui/react";
 import Layout from "../../components/Layout";
 import ProjectsCard from "../../components/ProjectsCard";
-import QuizGames from "../../public/images/QuizGames.jpg";
 import MarketplacePinar from "../../public/images/MarketplacePinar.jpg";
+import QuizGames from "../../public/images/QuizGames.jpg";
 const Projects = () => {
   return (
     <Layout>
@@ -13,14 +13,28 @@ const Projects = () => {
         <ProjectsCard
           img={QuizGames.src}
           title="Quiz Games"
-          description="Una descripcion"
+          description={
+            <Text>
+              Games website, built with next.js, Chakra UI and Framer Motion.
+              Also styled with nes.css library and fetching{" "}
+              {
+                <Link
+                  target="blank"
+                  rel="noreferred noopener"
+                  href="https://the-trivia-api.com/"
+                >
+                  the-trivia-api
+                </Link>
+              }
+            </Text>
+          }
           sourceHref="https://github.com/tomimacia/quiz-games"
           siteHref="https://quiz-games-pink.vercel.app/"
         />
         <ProjectsCard
           img={MarketplacePinar.src}
           title="Marketplace Pinar"
-          description="Una descripcion"
+          description="Marketplace built with next.js, Chakra UI and Framer Motion. Using Firebase's storage, firestore and google auth."
           sourceHref="https://github.com/tomimacia/marketplace-pinar"
           siteHref="https://marketplace-pinar.vercel.app/"
         />

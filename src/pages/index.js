@@ -41,8 +41,8 @@ export default function Home() {
               He is passionate about web development and enjoys working with
               HTML, CSS, and JavaScript to create dynamic and engaging web
               applications. <br />
-              In addition, he is also proficient in node.js, React, Next.js,
-              Chakra UI, and Framer Motion. <br />
+              In addition, e possesses a solid understanding of node.js, React,
+              Next.js, Chakra UI, Framer Motion and Firebase. <br />
               He strives to stay up-to-date with the latest technologies and
               trends in web development, and he is always looking for
               opportunities to expand his skillset. <br />
@@ -61,8 +61,7 @@ export default function Home() {
               Es apasionado por el desarrollo web y disfruta trabajando con
               HTML, CSS y JavaScript para crear aplicaciones web dinámicas e
               interesantes. <br />
-              Además, también es experto en
-              node.js, React, Next.js, Chakra UI y Framer Motion. <br />
+              Además, también Posee un sólido conocimiento de node.js, React, Next.js, Chakra UI, Framer Motion y Firebase. <br />
               Se esfuerza por mantenerse actualizado con las últimas tecnologías
               y tendencias en el desarrollo web, y siempre está buscando
               oportunidades para expandir su conjunto de habilidades. <br />

@@ -4,16 +4,16 @@ import { SocialMedia } from "./SocialMedia";
 const LayoutTitle = () => {
   return (
     <Container p={3}>
-      <Flex gap={2}>
+      <Flex justify="space-between">
         <Box>
           <Heading w="100%">Hello, I&apos;m Tomas Macia</Heading>
           <Text w="100%" fontSize="lg" fontWeight="bold">
             Full-stack React developer
           </Text>
         </Box>
-        <Image borderRadius="full" h={100} src={MainProfile.src} />
+        <Image borderRadius="full" h={100} alt='main-profile-img' src={MainProfile.src} />
       </Flex>
-      <SocialMedia/>
+      <SocialMedia />
     </Container>
   );
 };

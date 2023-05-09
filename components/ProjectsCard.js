@@ -23,6 +23,8 @@ const ProjectsCard = ({ img, title, description, sourceHref, siteHref }) => {
               View Source
             </Button>
             <Button
+              bg='blue.400'
+              _hover={{bg:'blue.200'}}
               size="sm"
               as={Link}
               target="blank"
