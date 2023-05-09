@@ -4,9 +4,9 @@ import {
 } from "@chakra-ui/react";
 import NavLinks from "../data/NavLinks.json";
 import useJsonData from "../hooks/useJsonData";
-import BaseNav from "./Navigation/BaseNav";
+import { BaseNavigation } from "./Navigation/BaseNavigation";
 import { LanguageSwitch } from "./Navigation/LanguageSwitch";
-import MobileNav from "./Navigation/MobileNav";
+import { MobileNavigation } from "./Navigation/MobileNavigation";
 const Navigation = () => {
   const data = useJsonData(NavLinks);
   return (
@@ -26,8 +26,8 @@ const Navigation = () => {
       >
         <LanguageSwitch />
 
-        <BaseNav data={data}/>
-        <MobileNav 
+        <BaseNavigation data={data}/>
+        <MobileNavigation 
         data={data}
         />
       </Container>

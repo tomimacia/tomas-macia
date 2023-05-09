@@ -3,7 +3,7 @@ import Link from "next/link";
 import { IoLogoGithub } from "react-icons/io5";
 
 
-const BaseNav = ({data}) => {
+export const BaseNavigation = ({data}) => {
   return (
     <Breadcrumb
       separator=""
@@ -39,4 +39,4 @@ const BaseNav = ({data}) => {
   );
 };
 
-export default BaseNav;
+

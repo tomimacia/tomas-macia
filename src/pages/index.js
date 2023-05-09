@@ -1,7 +1,6 @@
 import {
   Box,
   Container,
-  Divider,
   Flex,
   Heading,
   Image,
@@ -9,19 +8,24 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Layout from "../../components/Layout";
-import DescriptionProfile from "../../public/images/DescriptionProfile.png";
-import IndexData from "../../data/Index.json"
+import IndexData from "../../data/Index.json";
 import useJsonData from "../../hooks/useJsonData";
+import DescriptionProfile from "../../public/images/ProfileImages/DescriptionProfile.png";
 export default function Home() {
-  const data = useJsonData(IndexData)
+  const data = useJsonData(IndexData);
   return (
     <Layout>
       <Container>
         <Heading size="lg" pb={1}>
           {data?.Heading}
         </Heading>
-        <Divider orientation="horizontal" m={2} />
-        <Flex flexDir="column">
+        <Flex
+          mt={4}
+          p={2}
+          borderRadius="3%"
+          bg={useColorModeValue("blackAlpha.100", "blackAlpha.300")}
+          flexDir="column"
+        >
           <Box>
             <Image
               p={1}
@@ -33,19 +37,15 @@ export default function Home() {
               maxH={["200px", "300px", "350px", "400px"]}
               src={DescriptionProfile.src}
             />
-            <Text
-              p={1}
-              borderRadius="5px"
-              bg={useColorModeValue("blackAlpha.100", "blackAlpha.300")}
-              fontSize={["sm", "md", "md", "lg"]}
-            >
-              {data?.Description?.map((line,i)=>{
+            <Text p={1} borderRadius="5px" fontSize={["sm", "md", "md", "lg"]}>
+              {data?.Description?.map((line, i) => {
                 return (
-                  <span key={"Line"+i}>
-                  {line}<br/>
+                  <span key={"Line" + i}>
+                    {line}
+                    <br />
                   </span>
-                  )
-              })}              
+                );
+              })}
             </Text>
           </Box>
         </Flex>

@@ -14,7 +14,7 @@ import { IoLogoGithub } from "react-icons/io5";
 import ColorModeSwitch from "./ColorModeSwitch";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
-const MobileNav = ({ data }) => {
+export const MobileNavigation = ({ data }) => {
   return (
     <Flex flexDir="row">
       <ColorModeSwitch />
@@ -55,4 +55,3 @@ const MobileNav = ({ data }) => {
   );
 };
 
-export default MobileNav;
