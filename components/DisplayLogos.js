@@ -18,7 +18,7 @@ const DisplayLogos = ({
   });
   const language = useLanguage();
   return (
-    <Flex p={3} mt={10} gap={5} flexDir="column">
+    <Flex p={3} mt={[6,8,9,10]} gap={[3,4,5,5]} flexDir="column">
       <ChakraBox
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -36,7 +36,7 @@ const DisplayLogos = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: (i + startingTime + 1) * 0.2 }}
-              h={50}
+              h={[45,50,50,50]}
               alt={logo.alt}
               src={logo.src}
             />

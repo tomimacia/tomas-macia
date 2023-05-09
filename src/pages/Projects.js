@@ -17,11 +17,7 @@ const Projects = () => {
             <ProjectsCard
               key={project.alt}
               img={ProjectImages[i]?.src}
-              title={project.title}
-              alt={project.alt}
-              description={project.description}
-              sourceHref={project.sourceHref}
-              siteHref={project.siteHref}
+              project={project}
             />
           );
         })}        
