@@ -13,6 +13,7 @@ const Projects = () => {
         <ProjectsCard
           img={QuizGames.src}
           title="Quiz Games"
+          alt="quiz-website"
           description={
             <Text>
               Games website, built with next.js, Chakra UI and Framer Motion.
@@ -33,6 +34,7 @@ const Projects = () => {
         />
         <ProjectsCard
           img={MarketplacePinar.src}
+          alt="marketplace-pinar-website"
           title="Marketplace Pinar"
           description="Marketplace built with next.js, Chakra UI and Framer Motion. Using Firebase's storage, firestore and google auth."
           sourceHref="https://github.com/tomimacia/marketplace-pinar"

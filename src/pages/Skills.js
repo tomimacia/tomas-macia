@@ -12,13 +12,12 @@ const Skills = () => {
       <Flex gap={5} wrap="wrap">
         {Logos.map((logo, i) => {
           return (
-            <AnimatePresence>
+            <AnimatePresence key={`Logo-${i + 1}`}>
               <ChakraImg                
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}   
                 transition={{ delay: i*0.2 }}             
-                h={50}
-                key={`Logo-${i + 1}`}
+                h={50}                
                 alt={logo.alt}
                 src={logo.src}
               />
