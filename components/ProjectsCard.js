@@ -4,7 +4,7 @@ import { useLanguage } from "../context/languageContext";
 import { ProjectCardImg } from "./ProjectCardImg";
 
 const ProjectsCard = ({ img, project }) => {
-  const language = useLanguage();
+  const language = useLanguage();  
   return (
     <Box w="100%">
       <Heading p={5} w="100%" alignSelf="center" as="h3" size="md">
@@ -13,7 +13,7 @@ const ProjectsCard = ({ img, project }) => {
       <Flex position="relative" minH="150px">
         <ProjectCardImg alt={project.alt} img={img} />
         <Box
-          w={["60%", "70%", "70%", "70%"]}
+          w={["50%", "60%", "70%", "70%"]}
           right={0}
           position="absolute"
           flexDir="column"
