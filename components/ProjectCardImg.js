@@ -77,10 +77,10 @@ export const ProjectCardImg = ({ alt, src, sourceHref, tecs = [1, 2] }) => {
       ref={domNode}
       initial="rest"
       whileHover="hover"
-      onTap={() =>setIsTapped(prev=>!prev)}
+      onTouchStart={() =>setIsTapped(prev=>!prev)}
       animate={isTapped ? "hover" : "rest"}
-      w={370}
-      h={230}
+      w={[320,360,360,400]}
+      h={[200,225,225,250]}
     >
       <ChakraBox pos="absolute" variants={imageMotion}>
         <Image alt={alt} src={src} />

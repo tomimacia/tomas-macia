@@ -29,12 +29,24 @@ const fontSizes = {
   "5xl": "48px",
   "6xl": "64px",
 };
+const Box = {
+  variants: {
+    solid: () => ({
+      "@media(hover: none)": {
+        _hover: {
+          _hover,
+        },
+      },
+    }),
+  },
+}
 const overrides = {
   ...chakraTheme,
   fonts,
   breakpoints,
   fontWeights,
   fontSizes,
+  Box,
 };
 
 export const customTheme = extendTheme(overrides);
