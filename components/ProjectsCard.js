@@ -27,7 +27,7 @@ const ProjectsCard = ({ img, project }) => {
       </Heading>
       <Flex>
         <Box>          
-          <ProjectCardImg sourceHref={project.sourceHref} src={img} alt={project.alt}/>
+          <ProjectCardImg tecs={project.tecs} sourceHref={project.sourceHref} src={img} alt={project.alt}/>
         </Box>
       </Flex>
     </Box>
