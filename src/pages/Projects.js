@@ -1,8 +1,9 @@
 import { Container, Heading } from "@chakra-ui/react";
 import Layout from "../../components/Layout";
-import ProjectsCard from "../../components/ProjectsCard";
+import ProjectsCard from "../../components/Projects/ProjectsCard";
 import ProjectsJson from "../../data/Projects.json";
-import { ProjectImages } from "../../data/ProjectImages";
+import { MainImages } from "../../data/ProjectImages";
+import { ModalImages } from "../../data/ProjectImages";
 import useJsonData from "../../hooks/useJsonData";
 const Projects = () => {
   const data = useJsonData(ProjectsJson)
@@ -16,7 +17,8 @@ const Projects = () => {
           return (
             <ProjectsCard
               key={project.alt}
-              img={ProjectImages[i].src}
+              img={MainImages[i].src}
+              modalImages={ModalImages[i]}
               project={project}
             />
           );
