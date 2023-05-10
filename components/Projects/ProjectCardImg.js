@@ -15,7 +15,7 @@ import { useClickOutside } from "../../hooks/useClickOutside";
 // variants
 const imageMotion = {
   rest: {
-    opacity: 1,
+    opacity: 1,    
   },
   hover: {
     opacity: 0.2,
@@ -47,11 +47,14 @@ const listMotion = {
 const innerMotion = {
   rest: {
     opacity: 0,
-    y: -32,
+    display:'none',
+    y: -32,    
+        
   },
   hover: {
     opacity: 1,
-    y: -50,
+    display:'flex',
+    y: -50,    
     transition: {
       duration: 0.4,
       type: "tween",
@@ -61,8 +64,7 @@ const innerMotion = {
     },
   },
 };
-
-export const ProjectCardImg = ({ alt, onOpen, src, sourceHref, tecs }) => {
+export const ProjectCardImg = ({ alt, onOpen, src, tecs }) => {
   const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) =>
       isValidMotionProp(prop) || shouldForwardProp(prop),
@@ -79,15 +81,16 @@ export const ProjectCardImg = ({ alt, onOpen, src, sourceHref, tecs }) => {
       ref={domNode}
       initial="rest"
       whileHover="hover"
-      onTouchStart={() => setIsTapped((prev) => !prev)}
       animate={isTapped ? "hover" : "rest"}
       w={[320, 360, 360, 400]}
       h={[200, 225, 225, 250]}
     >
       <ChakraBox pos="absolute" variants={imageMotion}>
         <Image
+          onTouchStart={() => setIsTapped((prev) => !prev)}
           w={[320, 360, 360, 400]}
           h={[200, 225, 225, 250]}
+          zIndex={2}
           alt={alt}
           src={src}
         />
@@ -106,14 +109,11 @@ export const ProjectCardImg = ({ alt, onOpen, src, sourceHref, tecs }) => {
       <ChakraBox variants={innerMotion} w="100%" position="absolute">
         <Center w="100%">
           <Button
-            size={["xs", "xs", "sm", "sm"]}
+            size={["sm", "sm", "sm", "sm"]}
             bg="blackAlpha.600"
             color="white"
             _hover={{ bg: "blackAlpha.400" }}
-            onClick={onOpen}
-            target="blank"
-            rel="noreferred noopener"
-            href={sourceHref}
+            onClick={onOpen}            
           >
             {language === "English" ? "Learn more" : "Ver mas"}
           </Button>

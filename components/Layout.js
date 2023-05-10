@@ -24,16 +24,13 @@ const Layout = ({ children }) => {
       <Navigation />
       <Container h="100%" pb="4rem" pt="35px" maxW="container.md">
         <LayoutTitle />
-        <Divider                   
-          m={6}
-          maxW="90%"
-          orientation="horizontal"
-        />
-        <AnimatePresence>
+        <Divider m={6} maxW="90%" orientation="horizontal" />
+        <AnimatePresence mode="wait">
           <Box
             as={motion.div}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
             {children}
           </Box>

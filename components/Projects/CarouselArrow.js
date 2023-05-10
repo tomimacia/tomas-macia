@@ -1,9 +1,9 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
 
-export const ModalArrow = ({ onClick,isLeft }) => {
+export const CarouselArrow = ({ onClick,isLeft }) => {
   return <Flex
-  top= "calc(40%)"
+  top= "calc(55%)"
   pos= "absolute"
   bg= "white"
   color='black'
