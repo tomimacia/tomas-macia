@@ -53,7 +53,8 @@ const Carousel = ({ imgs }) => {
           h={["300px", "450px", "450px", "450px"]}
           w={["560px", "720px", "720px", "720px"]}
           src={imgs[page].src}
-          objectFit="center"
+          objectFit="cover"
+          objectPosition='top'
           custom={direction}
           variants={variants}
           initial="enter"

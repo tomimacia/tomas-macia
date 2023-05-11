@@ -91,6 +91,8 @@ export const ProjectCardImg = ({ alt, onOpen, src, tecs }) => {
     >
       <ChakraBox pos="absolute" variants={imageMotion}>
         <Image
+          objectFit="cover"
+          objectPosition="top"
           w={[320, 360, 360, 400]}
           h={[200, 225, 225, 250]}
           zIndex={2}
