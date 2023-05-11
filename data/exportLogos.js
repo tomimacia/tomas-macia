@@ -19,12 +19,13 @@ export const MainStack = [
   {...ChakraUI,alt:"ChakraUI-logo"},
   {...Firebase,alt:"Firebase-logo"},
   {...FramerMotion,alt:"FramerMotion-logo"},  
-  {...NodeJS,alt:"NodeJS-logo"},
+  
   
   
 ];
 export const Strong = [
   {...Python,alt:"Python-logo"},
+  {...NodeJS,alt:"NodeJS-logo"},
   {...Git,alt:"Git-logo"},
   {...Docker,alt:"Docker-logo"},
 ]
