@@ -4,7 +4,7 @@ import Head from "next/head";
 import Footer from "./Layout/Footer";
 import LayoutTitle from "./Layout/LayoutTitle";
 import Navigation from "./Navigation";
-
+import HeaderLogo from "../public/logos/HeaderLogo.png";
 const Layout = ({ children }) => {
   return (
     <Box pos="relative" minH="100vh" h="100%" as="main">
@@ -13,12 +13,12 @@ const Layout = ({ children }) => {
         <meta name="description" content="Tomas Macia's homepage" />
         <meta name="author" content="Tomas Macia" />
         <meta name="twitter:title" content="Tomas Macia" />
-        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tomimacia" />
         <meta name="twitter:creator" content="@tomimacia" />
         <meta property="og:site_name" content="Tomas Macia" />
         <meta name="og:title" content="Tomas Macia" />
         <meta property="og:type" content="website" />
+        <link rel="icon" href={HeaderLogo.src} />
         <title>Tomas Macia - Portfolio</title>
       </Head>
       <Navigation />
