@@ -8,7 +8,7 @@
         "description": "Marketplace built with next.js, Chakra UI and Framer Motion. Using Firebase's storage, firestore and google auth.",
         "source":{"href": "https://github.com/tomimacia/marketplace-pinar","button":"View source"},
         "site":{"href": "https://marketplace-pinar.vercel.app/","button":"Visit site"},
-        "tecs":["Next.js","ChakraUI","Firebase"]
+        "tecs":["Next.js","ChakraUI","Framer Motion","Firebase"]
       },
       {
         "title": "Quiz Games",
@@ -16,7 +16,7 @@
         "description": "Games website, built with next.js, Chakra UI and Framer Motion. Also styled with nes.css library and fetching the-trivia-api ",
         "source":{"href": "https://github.com/tomimacia/quiz-games","button":"View source"},
         "site":{"href": "https://quiz-games-pink.vercel.app/","button":"Visit site"},
-        "tecs":["Next.js","ChakraUI","Nes.css"]
+        "tecs":["Next.js","ChakraUI","Framer Motion","Nes.css"]
       }
       
     ]
