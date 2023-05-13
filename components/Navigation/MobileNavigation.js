@@ -18,7 +18,7 @@ export const MobileNavigation = ({ data }) => {
   return (
     <Flex flexDir="row">
       <ColorModeSwitch />
-      <Box display={{ md: "none", sm: "none" }}>
+      <Box ml={2} display={{ md: "none", sm: "none" }}>
         <Menu>
           <MenuButton
             as={IconButton}
