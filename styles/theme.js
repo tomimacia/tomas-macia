@@ -6,6 +6,10 @@ const fonts = {
   body: "montserrat",
   heading: "montserrat",
 };
+const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: true
+}
 const breakpoints = {
   sm: "40em",
   md: "52em",
@@ -47,6 +51,7 @@ const overrides = {
   fontWeights,
   fontSizes,
   Box,
+  config
 };
 
 export const customTheme = extendTheme(overrides);
