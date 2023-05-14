@@ -2,6 +2,6 @@ Welcome! My name is Tomás Macía, I am a full-stack react developer, and this i
 
 This is a Next.js project bootstrapped with create-next-app, and sylted with Chakra UI and Framer Motion.
 
-Clone, install, and change the data and happy hacking!
+Clone, npm install, change the data folder and happy hacking!
 
 Check the deployment on https://tomas-macia.vercel.app/
