@@ -1,11 +1,22 @@
-import { Box, Container, Divider } from "@chakra-ui/react";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  Box,
+  Container,
+  Divider,
+  Heading,
+  chakra,
+  shouldForwardProp,
+} from "@chakra-ui/react";
+import { AnimatePresence, isValidMotionProp, motion } from "framer-motion";
 import Head from "next/head";
 import Footer from "./Layout/Footer";
 import LayoutTitle from "./Layout/LayoutTitle";
 import Navigation from "./Navigation";
 import HeaderLogo from "../public/logos/HeaderLogo.png";
-const Layout = ({ children }) => {
+const Layout = ({ pageTitle, headTitle, children }) => {
+  const ChakraBox = chakra(motion.div, {
+    shouldForwardProp: (prop) =>
+      isValidMotionProp(prop) || shouldForwardProp(prop),
+  });
   return (
     <Box pos="relative" minH="100vh" h="100%" as="main">
       <Head>
@@ -19,21 +30,27 @@ const Layout = ({ children }) => {
         <meta name="og:title" content="Tomas Macia" />
         <meta property="og:type" content="website" />
         <link rel="icon" href={HeaderLogo.src} />
-        <title>Tomas Macia - Portfolio</title>
+        <title>Tomas Macia - {headTitle}</title>
       </Head>
       <Navigation />
       <Container h="100%" pb="4rem" pt="35px" maxW="container.md">
         <LayoutTitle />
         <Divider m={6} maxW="90%" orientation="horizontal" />
         <AnimatePresence mode="wait">
-          <Box
+          <ChakraBox
             as={motion.div}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ type: "tween", duration: 1 }}
           >
-            {children}
-          </Box>
+            <Container>
+              <Heading size="lg" pb={1}>
+                {pageTitle}
+              </Heading>
+              {children}
+            </Container>
+          </ChakraBox>
         </AnimatePresence>
       </Container>
       <Footer />

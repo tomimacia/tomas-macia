@@ -12,58 +12,58 @@ import { useState } from "react";
 import { useLanguage } from "../../context/languageContext";
 import { useClickOutside } from "../../hooks/useClickOutside";
 
-// variants
-const imageMotion = {
-  rest: {
-    opacity: 1,
-  },
-  hover: {
-    opacity: 0.2,
-    transition: {
-      duration: 0.4,
-      type: "tween",
-      ease: "easeIn",
-    },
-  },
-};
-const listMotion = {
-  rest: {
-    opacity: 0,
-    x: 0,
-    y: 40,
-  },
-  hover: (index) => ({
-    opacity: 1,
-    x: 15,
-    transition: {
-      duration: 0.4,
-      type: "tween",
-      ease: "easeIn",
-      delay: index / 2,
-      duration: 1 / 2,
-    },
-  }),
-};
-const innerMotion = {
-  rest: {
-    opacity: 0,
-    display: "none",
-    y: -32,
-  },
-  hover: {
-    opacity: 1,
-    display: "flex",
-    y: -50,
-    transition: {
-      duration: 0.4,
-      type: "tween",
-      ease: "easeIn",
-      delay: 1.5,
-      duration: 1 / 3,
-    },
-  },
-};
 export const ProjectCardImg = ({ alt, onOpen, src, tecs }) => {
+  // variants
+  const imageMotion = {
+    rest: {
+      opacity: 1,
+    },
+    hover: {
+      opacity: 0.2,
+      transition: {
+        duration: 0.4,
+        type: "tween",
+        ease: "easeIn",
+      },
+    },
+  };
+  const listMotion = {
+    rest: {
+      opacity: 0,
+      x: 0,
+      y: 40,
+    },
+    hover: (index) => ({
+      opacity: 1,
+      x: 15,
+      transition: {
+        duration: 0.4,
+        type: "tween",
+        ease: "easeIn",
+        delay: index / 2,
+        duration: 1 / 2,
+      },
+    }),
+  };
+  const innerMotion = {
+    rest: {
+      opacity: 0,
+      display: "none",
+      y: -32,
+    },
+    hover: {
+      opacity: 1,
+      display: "flex",
+      y: -50,
+      transition: {
+        duration: 0.4,
+        type: "tween",
+        ease: "easeIn",
+        delay: tecs.length * 0.5,
+        duration: 1 / 3,
+      },
+    },
+  };
   const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) =>
       isValidMotionProp(prop) || shouldForwardProp(prop),
