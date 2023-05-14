@@ -47,7 +47,7 @@
           "href": "https://marketplace-pinar.vercel.app/",
           "button": "Ir al sitio"
         },
-        "tecs": ["Next.js", "Chakra UI", "Firebase"]
+        "tecs": ["Next.js", "Chakra UI", "Framer Motion", "Firebase"]
       },
       {
         "title": "Quiz Games",
@@ -61,7 +61,7 @@
           "href": "https://quiz-games-pink.vercel.app/",
           "button": "Ir al sitio"
         },
-        "tecs": ["Next.js", "Chakra UI", "Nes.css"]
+        "tecs": ["Next.js", "Chakra UI", "Framer Motion", "Nes.css"]
       }
     ]
   }

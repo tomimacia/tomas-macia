@@ -44,6 +44,7 @@ export const MobileNavigation = ({ data }) => {
               href={data.Source.href}
               target={data.Source.target}
               rel={data.Source.rel}
+              gap={1}
             >
               {data.Source.Title}
               <IoLogoGithub />

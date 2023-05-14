@@ -29,10 +29,10 @@ export const BaseNavigation = ({data}) => {
           rel={data.Source.rel}
           display="inline-flex"
           alignItems="center"
-          style={{ gap: 3 }}
+          style={{ gap: 4 }}
         >
-          {data.Source.Title}
           <IoLogoGithub />
+          {data.Source.Title}
         </BreadcrumbLink>
       </BreadcrumbItem>
     </Breadcrumb>
