@@ -11,19 +11,33 @@ export const SocialMediaData = [
   {
     href: "https://www.instagram.com/tomimacia",
     title: "Instagram",
-    icon: BsInstagram,
+    MediaIcon: BsInstagram,
   },
   {
     href: "https://www.twitter.com/tomimacia",
     title: "Twitter",
-    icon: BsTwitter,
+    MediaIcon: BsTwitter,
   },
-  { href: "https://wa.me/541161685995", title: "WhatsApp", icon: BsWhatsapp },
+  {
+    href: "https://wa.me/541161685995",
+    title: "WhatsApp",
+    MediaIcon: BsWhatsapp,
+  },
   {
     href: "https://www.linkedin.com/in/tomas-eduardo-macia/",
     title: "LinkedIn",
-    icon: BsLinkedin,
+    MediaIcon: BsLinkedin,
   },
-  { href: "https://github.com/tomimacia/", title: "Github", icon: BsGithub },
-  { href: "mailto: tomasemacia@gmail.com", title: "Mail", icon: BsEnvelope },
+  {
+    href: "https://github.com/tomimacia/",
+    title: "Github",
+    MediaIcon: BsGithub,
+  },
 ];
+
+export const MailData = {
+  href: "mailto: tomasemacia@gmail.com",
+  title: "Mail",
+  MediaIcon: BsEnvelope,
+  text: { English: "Get in touch!", Español: "Contáctame!" },
+};
