@@ -8,7 +8,7 @@ export const SocialMedia = () => {
   return (
     <Flex gap={3} flexDir="column">
       <Flex mt={2} w="100%" align="center" justify="space-between">
-        <Flex gap={7}>
+        <Flex gap={[4,5,6,7]}>
           {SocialMediaData.map((media) => {
             const { href, title, MediaIcon } = media;
             return (
