@@ -7,11 +7,11 @@
       },
       {
         "Title": "Skills",
-        "href": "Skills"
+        "href": "/Skills"
       },
       {
         "Title": "Projects",
-        "href": "Projects"
+        "href": "/Projects"
       }
     ],
     "Source": {
@@ -30,11 +30,11 @@
       },
       {
         "Title": "Skills",
-        "href": "Skills"
+        "href": "/Skills"
       },
       {
         "Title": "Proyectos",
-        "href": "Projects"
+        "href": "/Projects"
       }
     ],
     "Source": {

@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layouts/Article";
 import ProjectsCard from "../../components/Projects/ProjectsCard";
 import { MainImages, ModalImages } from "../../data/ProjectImages";
 import ProjectsJson from "../../data/Projects.json";

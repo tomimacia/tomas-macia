@@ -1,7 +1,4 @@
-import {
-  Box,
-  Container
-} from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import NavLinks from "../data/NavLinks.json";
 import useJsonData from "../hooks/useJsonData";
 import { BaseNavigation } from "./Navigation/BaseNavigation";
@@ -26,10 +23,8 @@ const Navigation = () => {
       >
         <LanguageSwitch />
 
-        <BaseNavigation data={data}/>
-        <MobileNavigation 
-        data={data}
-        />
+        <BaseNavigation data={data} />
+        <MobileNavigation data={data} />
       </Container>
     </Box>
   );

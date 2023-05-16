@@ -1,9 +1,17 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { IoLogoGithub } from "react-icons/io5";
 
+export const BaseNavigation = ({ data }) => {
+  const bgCustomColor = useColorModeValue("teal.200", "teal");
+  const router = useRouter();
 
-export const BaseNavigation = ({data}) => {
   return (
     <Breadcrumb
       separator=""
@@ -13,10 +21,18 @@ export const BaseNavigation = ({data}) => {
       spacing={4}
     >
       {data?.Links.map((link) => {
+        const { Title, href } = link;
+        const isActive = href === router.asPath;
         return (
-          <BreadcrumbItem key={"BaseLink" + link.Title}>
-            <BreadcrumbLink as={Link} href={link.href}>
-              {link.Title}
+          <BreadcrumbItem key={"BaseLink" + Title}>
+            <BreadcrumbLink
+              as={Link}
+              href={href}
+              p="2.5px"
+              borderRadius="5px"
+              bg={isActive ? bgCustomColor : undefined}
+            >
+              {Title}
             </BreadcrumbLink>
           </BreadcrumbItem>
         );
@@ -38,5 +54,3 @@ export const BaseNavigation = ({data}) => {
     </Breadcrumb>
   );
 };
-
-

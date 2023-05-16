@@ -1,20 +1,12 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Image,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import Layout from "../../components/Layout";
+import { Box, Flex, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import IndexData from "../../data/Index.json";
 import useJsonData from "../../hooks/useJsonData";
 import DescriptionProfile from "../../public/images/ProfileImages/DescriptionProfile.png";
+import Layout from "../../components/Layouts/Article";
 export default function Home() {
   const data = useJsonData(IndexData);
   return (
-    <Layout headTitle="Homepage" pageTitle={data?.Heading}>
+    <Layout pageTitle={data?.Heading}>
       <Flex
         mt={4}
         p={2}

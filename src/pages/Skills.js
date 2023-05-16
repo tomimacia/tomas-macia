@@ -1,5 +1,5 @@
 import DisplayLogos from "../../components/DisplayLogos";
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layouts/Article";
 import { MainStack, Strong } from "../../data/exportLogos";
 const Skills = () => {
   return (

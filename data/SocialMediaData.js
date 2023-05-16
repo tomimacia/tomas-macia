@@ -14,6 +14,11 @@ export const SocialMediaData = [
     MediaIcon: BsInstagram,
   },
   {
+    href: "https://github.com/tomimacia/",
+    title: "Github",
+    MediaIcon: BsGithub,
+  },
+  {
     href: "https://www.twitter.com/tomimacia",
     title: "Twitter",
     MediaIcon: BsTwitter,
@@ -27,11 +32,6 @@ export const SocialMediaData = [
     href: "https://www.linkedin.com/in/tomas-eduardo-macia/",
     title: "LinkedIn",
     MediaIcon: BsLinkedin,
-  },
-  {
-    href: "https://github.com/tomimacia/",
-    title: "Github",
-    MediaIcon: BsGithub,
   },
 ];
 

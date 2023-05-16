@@ -1,7 +1,7 @@
 import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import NavProfileImage from "../../public/images/ProfileImages/NavProfileImage.jpg";
-import { SocialMedia } from "./SocialMedia";
-const LayoutTitle = () => {
+import NavProfileImage from "../public/images/ProfileImages/NavProfileImage.jpg";
+import { SocialMedia } from "./LayoutComps/SocialMedia";
+const NavTitle = () => {
   return (
     <Container mt={5} p={3}>
       <Flex justify="space-between">
@@ -11,11 +11,16 @@ const LayoutTitle = () => {
             Full-stack React developer
           </Text>
         </Box>
-        <Image borderRadius="full" h={100} alt='main-profile-img' src={NavProfileImage.src} />
+        <Image
+          borderRadius="full"
+          h={100}
+          alt="main-profile-img"
+          src={NavProfileImage.src}
+        />
       </Flex>
       <SocialMedia />
     </Container>
   );
 };
 
-export default LayoutTitle;
+export default NavTitle;

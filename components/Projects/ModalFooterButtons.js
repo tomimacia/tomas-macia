@@ -1,6 +1,5 @@
 import { Button, Flex, ModalFooter } from "@chakra-ui/react";
 import Link from "next/link";
-import React from "react";
 
 export const ModalFooterButtons = ({ project }) => {
   return (
