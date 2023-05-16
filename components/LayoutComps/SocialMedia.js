@@ -6,10 +6,10 @@ import { MailData, SocialMediaData } from "../../data/SocialMediaData";
 export const SocialMedia = () => {
   const language = useLanguage();
   return (
-    <Flex gap={2} flexDir="column">
+    <Flex gap={3} flexDir="column">
       <Flex mt={2} w="100%" align="center" justify="space-between">
         <Flex gap={7}>
-          {SocialMediaData.map((media, i) => {
+          {SocialMediaData.map((media) => {
             const { href, title, MediaIcon } = media;
             return (
               <Link

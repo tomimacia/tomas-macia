@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       <Navigation />
       <Container h="100%" pb="4rem" pt="35px" maxW="container.md">
         <NavTitle />
-        <Divider m={6} maxW="90%" orientation="horizontal" />
+        <Divider maxW="90%" m="auto" mb={6} mt={5} orientation="horizontal" />
         {children}
       </Container>
       <Footer />
