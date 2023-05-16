@@ -9,11 +9,12 @@ const Navigation = () => {
   return (
     <Box
       as="nav"
-      h="40px"
+      h="60px"
       bg="blackAlpha.200"
       top={0}
       position="fixed"
       w="100%"
+      style={{ backdropFilter: 'blur(10px)' }}
     >
       <Container
         h="100%"
