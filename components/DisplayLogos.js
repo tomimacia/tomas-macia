@@ -1,6 +1,7 @@
-import { Flex, Heading, Image } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/languageContext";
+import Image from "next/image";
 
 const DisplayLogos = ({
   logos,
@@ -36,15 +37,16 @@ const DisplayLogos = ({
               animate={{ opacity: 1 }}
               transition={{ delay: (i + startingTime + 1) * 0.2 }}
             >
-              <Image
-                h={[45, 50, 50, 55]}
-                w={[45, 50, 50, 55]}
-                title={logo.alt.split("-")[0]}
-                objectFit="contain"
-                objectPosition="center"
-                alt={logo.alt}
-                src={logo.src}
-              />
+              <Flex justifyContent="center" alignItems="center" h="100%">
+                <Image
+                  height={sizeValue}
+                  width={sizeValue}
+                  style={{width:"auto"}}
+                  title={logo.alt.split("-")[0]}
+                  alt={logo.alt}
+                  src={logo.imageProps.src}
+                />
+              </Flex>
             </motion.div>
           );
         })}
