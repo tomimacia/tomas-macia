@@ -4,4 +4,4 @@ This is a Next.js project bootstrapped with create-next-app, and sylted with Cha
 
 Clone, npm install, change the data folder and happy hacking!
 
-Check the deployment on https://tomas-macia.vercel.app/
+Updated to TS. Deploment => https://www.tomasmacia.com.ar/
