@@ -1,4 +1,4 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/languageContext";
 import Image from "next/image";
@@ -9,6 +9,7 @@ const DisplayLogos = ({
   spanishTitle,
   startingTime = 0,
 }) => {
+  const sizeValue = useBreakpointValue([45, 50, 50, 59]);
   const language = useLanguage();
   return (
     <Flex
@@ -41,10 +42,10 @@ const DisplayLogos = ({
                 <Image
                   height={sizeValue}
                   width={sizeValue}
-                  style={{width:"auto"}}
+                  style={{ width: "auto" }}
                   title={logo.alt.split("-")[0]}
                   alt={logo.alt}
-                  src={logo.imageProps.src}
+                  src={logo.src}
                 />
               </Flex>
             </motion.div>
